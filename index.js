@@ -8,7 +8,7 @@ function findMatching(drivers, string) {
 
 function fuzzyMatch(drivers, string) {
     return drivers.filter(driver => {
-        if (driver.toUpperCase().substring(0, 2) === string.toUpperCase()) {
+        if (driver.toUpperCase().substring(0, string.length) === string.toUpperCase()) {
             return driver
         }
     })
